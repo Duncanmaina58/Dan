@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Fintech Services</title><style>
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+.header {
+    background-color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.logo {
+    height: 34px;
+}
+.nav-menu {
+    display: flex;
+    gap: 20px;
+}
+.nav-item {
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+}
+.nav-item.active {
+    color: #007bff;
+}
+.hero {
+    background-image: url('website-header.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+    position: relative;
+
+}
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,100,0.6);
+}
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+.hero p {
+    font-size: 18px;
+    margin-bottom: 0;
+}
+.services {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.service-item {
+    display: flex;
+    margin-bottom: 40px;
+}
+.service-image {
+    flex: 1;
+    margin-right: 20px;
+}
+.service-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+.service-content {
+    flex: 1;
+    margin-left: 48px;
+    margin-top: 40px;
+}
+.service-content h2 {
+    color: #333;
+    margin-top: 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+.service-content p {
+    color: #666;
+    line-height: 1.6;
+    font-size: 12px;
+}
+.read-more {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 40px;
+}
+.service-card {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: left;
+}
+.service-card h3 {
+    color: #333;
+    margin-top: 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+.service-card p {
+    color: #666;
+    font-size: 12px;
+    line-height: 1.4;
+}
+.cta-section {
+    background-color: #b0daee;
+    padding: 40px 20px;
+    text-align: center;
+    margin-top: 40px;
+    height: 20px;
+}
+.cta-section h2{
+    font-size: 12px;
+    margin-top: -16px;
+}
+.cta-button {
+    display: inline-block;
+    background-color: #3469a1;
+    color: white;
+    padding: 8px 90px;
+    border-radius: 15px;
+    text-decoration: none;
+    margin-top: 0px;
+}
+.footer {
+    background-color: #060622cc;
+    color: #ffffff;
+    padding: 40px 20px;
+    height: 40px;
+}
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    font-size: 3px;
+    margin-top: -27px;
+}
+.footer-left {
+    flex: 1;
+    max-width: 300px;
+}
+.footer-logo {
+    width: 150px;
+    margin-bottom: 15px;
+}
+.footer-text {
+    font-size: 10px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+.social-icons {
+    display: flex;
+    gap: 10px;
+}
+.social-icon {
+    width: 30px;
+    height: 30px;
+}
+.footer-right {
+    flex: 2;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.footer-column {
+    margin-bottom: 20px;
+    min-width: 150px;
+}
+.footer-column h3 {
+    color: #ffffff;
+    margin-bottom: 15px;
+    font-size: 8px;
+}
+.footer-column ul {
+    list-style-type: none;
+    padding: 0;
+}
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+.footer-column ul li a {
+    color: #b9bbbe;
+    text-decoration: none;
+    font-size: 8px;
+}
+.footer-column ul li a:hover {
+    color: #ffffff;
+}
+.footer-bottom {
+    margin-top: 40px;
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #40444b;
+    font-size: 14px;
+}
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+    }
+    .hero {
+        padding: 60px 20px;
+    }
+    .hero h1 {
+        font-size: 28px;
+    }
+    .hero p {
+        font-size: 16px;
+    }
+    .service-item {
+        flex-direction: column;
+    }
+    .service-image {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+    .footer-content {
+        flex-direction: column;
+    }
+    .footer-left, .footer-right {
+        width: 100%;
+    }
+    .footer-column {
+        width: 50%;
+    }
+}
+</style></head><body>
+<header class="header">
+    <img src="New-logo-transparent-156x34.webp" alt="Fintech Logo" class="logo" width="156" height="34">
+    <nav class="nav-menu">
+        <a href="#" class="nav-item">Home</a>
+        <a href="#" class="nav-item">About</a>
+        <a href="#" class="nav-item active">Services</a>
+        <a href="#" class="nav-item">Solution</a>
+        <a href="#" class="nav-item">Open Talk</a>
+        <a href="#" class="nav-item">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>Our Services</h1>
+        <p>Home &gt; Our Services</p>
+    </div>
+</section>
+
+<section class="services">
+    <div class="service-item">
+        <div class="service-image">
+            <img src="Consultancy-services.jpg" alt="Financial analytics dashboard on a laptop screen" width="300" height="300">
+        </div>
+        <div class="service-content">
+            <h2>Consultancy Services</h2>
+            <p>Our consultancy and advisory services are designed to provide you with strategic insights and practical solutions for your fintech business. We offer expert advice on market trends, regulatory compliance, technology adoption, and operational efficiency.</p>
+            <a href="#" class="read-more">Read More &gt;</a>
+        </div>
+    </div>
+    
+    <div class="service-item">
+        <div class="service-image">
+            <img src="Microsoft-Training.jpg" alt="Person using a tablet with financial charts" width="300" height="300">
+        </div>
+        <div class="service-content">
+            <h2>Financial Analytics</h2>
+            <p>Our advanced financial analytics services leverage cutting-edge technology to provide deep insights into your financial data. We help you make data-driven decisions, identify trends, and optimize your financial strategies for maximum growth and efficiency.</p>
+            <a href="#" class="read-more">Read More &gt;</a>
+        </div>
+    </div>
+
+    <div class="service-item">
+        <div class="service-image">
+            <img src="Software-Development.jpg" alt="Mobile banking app interface on a smartphone" width="200" height="200">
+        </div>
+        <div class="service-content" style="margin-left: 20px;">
+            <h2>Mobile Banking Solutions</h2>
+            <p>Our team specializes in developing state-of-the-art mobile banking applications. We create secure, user-friendly, and feature-rich mobile platforms that enhance customer experience and streamline banking operations. Our solutions are tailored to meet the evolving needs of modern financial institutions and their customers.</p>
+            <a href="#" class="read-more">Read More &gt;</a>
+        </div>
+    </div>
+
+    <div class="service-grid">
+        <div class="service-card">
+            <h3>Quality Assurance as a service</h3>
+            <p>Our QA experts work closely with your development team to identify and resolve issues early, ensuring a smooth and flawless user experience.</p>
+        </div>
+        <div class="service-card">
+            <h3>Consultancy & Advisory</h3>
+            <p>Our consultancy and advisory services are designed to provide you with strategic insights and practical solutions for your fintech business. We offer expert advice on market trends, regulatory compliance, technology adoption, and operational efficiency.</p>
+        </div>
+        <div class="service-card">
+            <h3>Managed IT Services</h3>
+            <p>Our Managed IT Services provide comprehensive support for your fintech infrastructure. We handle everything from routine maintenance and monitoring to complex system integrations and upgrades.</p>
+        </div>
+        <div class="service-card">
+            <h3>Information Security Solutions & Products Consultancy</h3>
+            <p>Protecting sensitive financial data is critical in the fintech industry. Our information security solutions and products consultancy offers a range of services designed to safeguard your business against cyber threats.</p>
+        </div>
+        <div class="service-card">
+            <h3>Data Replication & Recovery Solution</h3>
+            <p>Our data replication and recovery solutions ensure that your fintech operations remain uninterrupted in the event of data loss or system failure. We implement state-of-the-art data replication technologies that provide real-time backup and quick recovery capabilities.</p>
+        </div>
+        <div class="service-card">
+            <h3>Imperva (WAF & DAM)</h3>
+            <p>Leverage the power of Imperva's Web Application Firewall (WAF) and Database Activity Monitoring (DAM) to protect your fintech applications and data. Our services include the deployment, configuration, and management of Imperva solutions, ensuring robust protection against web attacks, data breaches and unauthorized access.</p>
+        </div>
+    </div>
+</section>
+
+<section class="cta-section">
+    <h2>Reach out to us for a demo site</h2>
+    <a href="#" class="cta-button">Book a demo</a>
+</section>
+
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-left">
+            <img src="New-logo-transparent-156x34.webp" alt="Fintech Logo" class="footer-logo" width="150" height="32">
+            
+        </div>
+        <div class="footer-right">
+            <div class="footer-column">
+                <h3>Useful Links</h3>
+                <ul>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Open Talk</a></li>
+                    <li><a href="#">Terms and Conditions</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Regional Offices</h3>
+                <ul>
+                    <li><a href="tel:+12345678901">Mobile: (+1) 234 567 8901</a></li>
+                    <li><a href="tel:+23456789012">Mobile: (+2) 345 678 9012</a></li>
+                    <li><a href="tel:+34567890123">Mobile: (+3) 456 789 0123</a></li>
+                    <li><a href="tel:+45678901234">Mobile: +456-789-01234/40</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Connect</h3>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">LinkedIn</a></li>
+                    <li><a href="#">Instagram</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script>
+// JavaScript could be added here for additional interactivity
+</script>
+</body></html>
